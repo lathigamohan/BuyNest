@@ -1,4 +1,4 @@
-# 🛍️ ShopSphere
+# 🛍️ BuyNest
 
 A modern e-commerce backend built with **Node.js**, **Express.js**, **TypeScript**, **PostgreSQL**, and **Prisma**.
 
