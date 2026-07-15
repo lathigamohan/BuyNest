@@ -1,122 +1,180 @@
-# 🛍️ BuyNest
+# 🛒 BuyNest
 
-A modern e-commerce backend built with **Node.js**, **Express.js**, **TypeScript**, **PostgreSQL**, and **Prisma**.
+A modern **E-Commerce Backend API** built using **Python** and **FastAPI**. BuyNest provides secure user authentication, product management, shopping cart functionality, and order processing through RESTful APIs.
 
-The project focuses on clean architecture, authentication, product management, shopping cart functionality, and order processing.
+The project is designed to demonstrate backend development skills, clean architecture, and database management using Python.
 
 ---
 
 ## 🚀 Features
 
-### Authentication
-- User Registration
-- User Login
-- JWT Authentication
-- Password Hashing
+### 🔐 Authentication
 
-### Users
-- View Profile
-- Update Profile
+* User Registration
+* User Login
+* JWT Authentication
+* Password Hashing (bcrypt)
 
-### Products
-- Create Product
-- Update Product
-- Delete Product
-- Get All Products
-- Get Product by ID
+### 👤 User Management
 
-### Categories
-- Create Category
-- View Categories
+* View Profile
+* Update Profile
 
-### Cart
-- Add to Cart
-- Update Quantity
-- Remove from Cart
+### 📦 Product Management
 
-### Orders
-- Place Order
-- View Order History
+* Add Product
+* Update Product
+* Delete Product
+* View All Products
+* View Product Details
 
----
+### 📂 Categories
 
-## 🛠 Tech Stack
+* Create Category
+* View Categories
 
-- Node.js
-- Express.js
-- TypeScript
-- PostgreSQL
-- Prisma ORM
-- JWT
-- Bcrypt
+### 🛒 Shopping Cart
+
+* Add Items to Cart
+* Update Item Quantity
+* Remove Items from Cart
+* View Cart
+
+### 📋 Orders
+
+* Place Orders
+* View Order History
 
 ---
 
-## 📁 Project Structure
+# 🛠️ Tech Stack
 
-```
-src/
+| Category              | Technology    |
+| --------------------- | ------------- |
+| Language              | Python 3      |
+| Framework             | FastAPI       |
+| Database              | PostgreSQL    |
+| ORM                   | SQLAlchemy    |
+| Database Migration    | Alembic       |
+| Authentication        | JWT           |
+| Password Hashing      | bcrypt        |
+| Validation            | Pydantic      |
+| API Documentation     | Swagger UI    |
+| Development Server    | Uvicorn       |
+| Environment Variables | python-dotenv |
+| API Testing           | Postman       |
+| Version Control       | Git & GitHub  |
+
+---
+
+# 📁 Project Structure
+
+```text
+BuyNest/
 │
-├── modules/
+├── app/
 │   ├── auth/
-│   ├── users/
-│   ├── products/
-│   ├── categories/
-│   ├── cart/
-│   └── orders/
+│   ├── models/
+│   ├── schemas/
+│   ├── routes/
+│   ├── database/
+│   ├── core/
+│   ├── utils/
+│   └── main.py
 │
-├── middleware/
-├── routes/
-├── prisma/
-└── app.ts
+├── alembic/
+├── tests/
+├── requirements.txt
+├── .env
+└── README.md
 ```
 
 ---
 
-## ⚙️ Installation
+# ⚙️ Installation
+
+### Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/shopsphere.git
-
-cd shopsphere
-
-npm install
+git clone https://github.com/yourusername/BuyNest.git
+cd BuyNest
 ```
 
-Create a `.env` file:
+### Create a Virtual Environment
+
+```bash
+python -m venv venv
+```
+
+### Activate the Virtual Environment
+
+**Windows**
+
+```bash
+venv\Scripts\activate
+```
+
+**macOS/Linux**
+
+```bash
+source venv/bin/activate
+```
+
+### Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Configure Environment Variables
+
+Create a `.env` file in the project root.
 
 ```env
-DATABASE_URL=
-JWT_SECRET=
-PORT=5000
+DATABASE_URL=your_database_url
+JWT_SECRET_KEY=your_secret_key
+ALGORITHM=HS256
+ACCESS_TOKEN_EXPIRE_MINUTES=30
 ```
 
-Run migrations:
+### Run Database Migrations
 
 ```bash
-npx prisma migrate dev
+alembic upgrade head
 ```
 
-Start the server:
+### Start the Development Server
 
 ```bash
-npm run dev
+uvicorn app.main:app --reload
 ```
 
 ---
 
-## 📌 Future Improvements
+# 📄 API Documentation
 
-- Wishlist
-- Payment Gateway
-- Reviews & Ratings
-- Admin Dashboard
-- Redis Caching
-- Docker
-- Swagger Documentation
+Once the server is running, visit:
+
+* **Swagger UI:** `http://127.0.0.1:8000/docs`
+* **ReDoc:** `http://127.0.0.1:8000/redoc`
 
 ---
 
-## 👨‍💻 Author
+# 🎯 Future Enhancements
+
+* Wishlist
+* Product Reviews & Ratings
+* Coupon System
+* Payment Gateway Integration
+* Image Uploads
+* Admin Dashboard
+* Docker Support
+* Redis Caching
+
+---
+
+# 👨‍💻 Author
 
 **Lathiga MK**
+
+Backend Developer | Python & FastAPI Enthusiast
